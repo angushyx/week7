@@ -1,0 +1,175 @@
+.hero {
+  background: url("../images/bg_home.jpg");
+  background-size: cover;
+  height: 680px;
+  &-content {
+    border: 1px solid $white;
+    margin: 0 auto;
+    &-dot {
+      width: 10px;
+      height: 10px;
+      background: #ccc;
+    }
+    > h1 {
+      background: linear-gradient(to top, $primary, $secondary);
+      background: -webkit-linear-gradient(to top, $primary, $secondary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+
+.intro {
+  &-text {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 5px solid $primary;
+      width: 20%;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (min-width: 768px) {
+        left: 0;
+        transform: translateX(10%);
+      }
+    }
+  }
+  &-card:hover {
+    border: 1px solid $primary;
+    background: $dark;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+}
+#intro-icon {
+  background: linear-gradient(to top, $primary, $secondary);
+  background: -webkit-linear-gradient(to top, $primary, $secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subTitle {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid $primary;
+    width: 50px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.step {
+  top: 0;
+  left: 0;
+  transform: translate(50%, -50%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.teacher-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.btn-custom {
+  background: linear-gradient(to right, $primary, $secondary);
+}
+
+.info {
+  &-image:hover {
+    opacity: 0.3;
+  }
+  &-context {
+    transform: translateY(-50%);
+    > h3 {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: 5px solid $primary;
+        width: 50px;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (min-width: 768px) {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+#primary-icon {
+  color: $primary;
+}
+
+.article {
+  &-border {
+    display: none;
+    width: 32px;
+    height: 32px;
+    &-topLeft {
+      border-top-left-radius: 10px;
+    }
+    &-topRight {
+      border-top-right-radius: 10px;
+    }
+    &-bottomLeft {
+      border-bottom-left-radius: 10px;
+    }
+    &-bottomRight {
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+.article:hover {
+  .article-border {
+    display: block;
+  }
+}
+
+.comment {
+  background: url("../images/bg_share.jpg");
+
+  &-wrapper {
+    @media (min-width: 768px) {
+      width: 70%;
+    }
+  }
+  &-image-wrapper {
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+  &-image {
+    transform: translate(6px, -6px);
+  }
+
+  &-context {
+    @media (min-width: 768px) {
+      position: absolute;
+      width: 50%;
+      left: 0;
+      bottom: 50%;
+      transform: translateX(95%);
+    }
+  }
+
+  &-student {
+    width: 80px;
+    height: 80px;
+    top: 0;
+    right: 0;
+    transform: translate(-50px, -30px);
+  }
+}
+
+#circle-icon {
+  color: $primary;
+  font-size: 10px;
+}

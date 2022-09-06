@@ -1,0 +1,32 @@
+.course-intro {
+  &-list {
+    ::before {
+      content: "◆";
+      color: $primary;
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+    }
+  }
+  &-bar {
+    position: relative;
+    &::before {
+      content: "";
+      background: $primary;
+      height: 100%;
+      position: absolute;
+      width: 2px;
+      left: 5px;
+    }
+  }
+}
+.course-price-circle {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(to top, $primary, $secondary);
+  background: -webkit-linear-gradient(to top, $primary, $secondary);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2;
+}
+

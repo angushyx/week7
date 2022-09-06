@@ -1,0 +1,58 @@
+.checkout {
+  &-teacher-card {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #2d2d2d;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+    }
+  }
+  &-progress {
+    height: 88px;
+    &-dot {
+      width: 20px;
+      height: 20px;
+      z-index: 99;
+    }
+
+    &-bar {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 88%;
+        border-bottom: 2px solid #ccc;
+        bottom: 80%;
+        left: 53%;
+        @media (min-width: 768px) {
+          width: 94%;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  &::after {
+    border-bottom: 2px solid $primary;
+  }
+}
+
+@media (min-width: 768px) {
+  .checkout {
+    background: $gray-light-bg !important;
+    &-teacher-card {
+      position: absolute;
+      &::after {
+        content: "";
+        top: 50%;
+        left: 100%;
+      }
+    }
+  }
+}
